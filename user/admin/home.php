@@ -47,7 +47,7 @@ if ($_SESSION['role'] != 'Admin') {
                         <a href="../../new.php" class="nav-link color-four">Publikasi</a>
                     </li>
                     <li class="nav-item ms-auto">
-                        <a href="course.php" class="nav-link color-four">List Buku</a>
+                        <a href="index.php?page=list-buku" class="nav-link color-four">List Buku</a>
                     </li>
                     <li class="nav-item ms-auto">
                     <a href="#" class="btn btn-brand">Profil</a>

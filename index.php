@@ -5,6 +5,8 @@ if(isset($_GET['action'])) {
     $action = $_GET['action'];
     if ($action === 'konfirmasi-login') {
         include 'user/auth/loginProcess.php';
+    }else if($action === 'delete-list-buku'){
+        @include 'user/admin/deleteBuku.php';
     }
 }
 ?>
@@ -27,6 +29,8 @@ if(isset($_GET['action'])) {
                 @include './user/penerbit/home.php';
             }else if($page == 'mahasiswa'){
                 @include './user/mahasiswa/home.php';
+            }else if($page == 'list-buku'){
+                @include './user/course.php';
             }
         }else {
             @include './home.php';
