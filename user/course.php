@@ -96,9 +96,11 @@ $userCount  = mysqli_num_rows($result);
               <div class="col-lg-6 col-sm-12 mb-4 d-flex justify-content-start">
                   <h1 class=" display-5 fw-bold text-white">Tipe Buku</h1>
               </div>
-              <div class="col-lg-6 col-sm-12 mb-4 d-flex justify-content-end">
-                  <button type="button" class="btn btn-success"><i class="fas fa-plus"></i></button>
-              </div>
+              <?php if($_SESSION['role'] != 'Mahasiswa') { ?>
+                <div class="col-lg-6 col-sm-12 mb-4 d-flex justify-content-end">
+                    <button type="button" class="btn btn-success"><i class="fas fa-plus"></i></button>
+                </div>
+              <?php } ?>
               <?php 
                 if($_GET['gagal'] === 'invalid'){
                   echo '
