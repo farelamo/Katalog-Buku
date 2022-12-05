@@ -152,7 +152,9 @@ $query = mysqli_query($conn, $sql);
                       <th>Penerbit</th>
                       <th>Jenis</th>
                       <th>Tags</th>
-                      <th>Action</th>
+                      <?php if($_SESSION['role'] != 'Mahasiswa') { ?>
+                        <th>Action</th>
+                      <?php } ?>
                     </tr>
                   </thead>
                   <tbody>
@@ -171,11 +173,13 @@ $query = mysqli_query($conn, $sql);
                         <td><?= $penerbit ?></td>
                         <td><?= $jenis_buku ?></td>
                         <td><?= $tags ?></td>
-                        <td>
-                        <a href="#" class="btn btn-sm btn-danger" onclick="hapus(<?= $id_buku ?>)" data-bs-toggle="modal" data-bs-target="#hapus">
-                        <i class="fa fa-trash"></i>
-                        </a>
-                        </td>
+                        <?php if($_SESSION['role'] != 'Mahasiswa') { ?>
+                          <td>
+                            <a href="#" class="btn btn-sm btn-danger" onclick="hapus(<?= $id_buku ?>)" data-bs-toggle="modal" data-bs-target="#hapus">
+                              <i class="fa fa-trash"></i>
+                            </a>
+                          </td>
+                        <?php } ?>
                     <?php }?>
                   </tbody>
                 </table>

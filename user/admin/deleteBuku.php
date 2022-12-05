@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if ($_SESSION['role'] != 'Admin') {
+    if ($_SESSION['role'] != 'Mahasiswa') {
         header('Location:index.php?page=list-buku&gagal=invalid');
     }else {
         @include 'config/koneksi.php';
