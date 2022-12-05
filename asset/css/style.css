@@ -1,0 +1,302 @@
+/* font */
+body{
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--mainColor);
+}
+
+
+
+
+/* warna */
+:root{
+    --mainColor : #023047;
+    --secondaryColor : #A8DADC;
+    --acsentColor : #FEB139;
+    --fourcolor : #E5DAD8;
+    
+}
+
+.color-main {
+    color:var(--mainColor);
+}
+.color-acsent {
+    color:var(--acsentColor);
+}
+.color-second {
+    color:var(--secondaryColor);
+}
+.color-four {
+    color:var(--fourcolor);
+}
+
+.bg-main {
+    background-color: var(--mainColor);
+}
+
+.bg-second{
+    background-color: var(--secondaryColor);
+}
+
+.bg-acsent{
+    background-color: var(--acsentColor);
+}
+
+.bg-four{
+    background-color: var(--fourcolor);
+}
+
+/* navbar */
+
+.navbar .navbar-nav a{
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 5px 10px;
+}
+
+.btn-brand {
+    border-color: var(--brand);
+    background-color: var(--brand);
+    color: var(--fourcolor);
+}
+
+.btn-brand:hover {
+    background-color: var(--fourcolor);
+    border-color: var(--fourcolor);
+    color: var(--mainColor);
+}
+
+
+/* -------------------- INDEX.HTML -------------------- */
+
+/* untuk hr */
+.garis{
+    height: 5px;
+    color: var(--secondaryColor);
+    margin: 0 auto;
+    opacity: 100%;
+}
+    
+.garis-oren{
+    height: 5px !important;
+    margin: 0 auto !important;
+    opacity: 100% !important;
+    width: 10% !important;
+    color: var(--acsentColor);
+}
+
+/* home */
+.home {
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* about */
+
+.about{
+    min-height: 50vh;
+}
+
+.about p{
+    text-align: justify;
+}
+
+.about .col-lg-6 .row{
+    margin-top: 0px;
+}
+
+.about .col-1{
+    display: block;
+    box-sizing: border-box;
+    text-align: start;
+    letter-spacing: -2px;
+    color: var(--acsentColor);
+}
+
+.about .col-11{
+    margin-top: 6px;
+    font-size: x-small;
+    color: var(--acsentColor);
+    text-align: start;
+}
+
+
+/* team */
+
+.team{
+    min-height: 50vh;
+    background-color: var(--mainColor);
+}
+    
+.team .col-lg-3{
+    margin-top: 30px;
+}
+
+.team .col-lg-3 img{
+    width: 100%;
+}
+
+.team .icons {
+    width: 100%;
+    width: 250px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.team a{
+    margin-right: 10px;
+}
+
+.team .items {
+    transform: scale(1.6);
+}
+    
+.team i{
+    color: var(--mainColor);
+}
+    
+.team .overlay{
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    transition: all ease-in-out .4s;
+    color: var(--mainColor);
+}
+
+.team .overlay:hover{
+    background-color:rgba(168, 218, 220, 0.5);
+    opacity: 1;
+}
+
+.team .overlay h3{
+    font-size: medium;
+    text-align: center;
+}
+
+
+/* -------------------- LOGIN PAGE -------------------- */
+
+.user{
+    margin-top: 5vh;
+    height: 75vh;
+}
+
+.user .col-9{
+    border-radius: 20px;
+}
+
+.user .btn-primary{
+    background-color: var(--mainColor)!important;
+    color: var(--fourcolor)!important;
+    border-color: var(--mainColor)!important;
+    width: 100%;
+}
+
+.user .btn-primary:hover{
+    border-color: var(--acsentColor)!important;
+    background-color: var(--acsentColor)!important;
+}
+
+.error{
+    margin:  10px 0;
+    display: block;
+    background: crimson;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* -------------------- HOME PAGE -------------------- */
+
+.homepage{
+    min-height: 75vh;
+    margin-top: 20vh;
+    }
+
+/* button hover */
+.homepage button:hover{
+    background-color: var(--acsentColor);
+    color: var(--mainColor);
+}
+
+
+.tipebuku p{
+    text-align: justify;
+}
+.tipebuku img{
+    max-height: 20vh;
+}
+
+.item:hover{
+    background-color: white;
+}
+
+.item .btn-primary{
+    background-color: var(--mainColor)!important;
+    color: var(--fourcolor)!important;
+    border-color: var(--mainColor)!important;
+    width: 100%;
+}
+
+.item .btn-primary:hover{
+    border-color: var(--acsentColor)!important;
+    background-color: var(--acsentColor)!important;
+}
+
+
+/* -------------------- COURSE PAGE -------------------- */
+
+.jenisbuku i{
+    width: 40px;
+    font-size: 25px;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+.tipeall{
+    border-style: solid;
+    border-color: var(--acsentColor);
+
+}
+
+.tipe{
+    align-self: center;
+    padding: 5px;
+    width: 20vh;
+    text-decoration: none;
+    background-color: white;
+    color: var(--mainColor);
+}
+
+.tipe:hover{
+    background-color: var(--acsentColor);
+    color: white;
+}
+
+
+table{
+    border: solid;
+}
+
+th{
+    border-style: solid;
+}
+
+
+
+.new .btn-primary{
+    background-color: var(--mainColor)!important;
+    color: var(--fourcolor)!important;
+    border-color: var(--mainColor)!important;
+}
+
+.new .btn-primary:hover{
+    border-color: black!important;
+    background-color: black!important;
+}
