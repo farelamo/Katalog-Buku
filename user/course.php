@@ -157,6 +157,7 @@ $query = mysqli_query($conn, $sql);
                   </thead>
                   <tbody>
                     <?php 
+                      $i = 1;
                       while ($data = mysqli_fetch_row($query)) {
                         $id_buku    = $data[0];
                         $nama_buku  = $data[1];
@@ -165,7 +166,7 @@ $query = mysqli_query($conn, $sql);
                         $tags       = $data[4];
                     ?>
                       <tr>
-                        <td><?= $id_buku ?></td>
+                        <td><?= $i++ ?></td>
                         <td id="n<?= $id_buku ?>"><?= $nama_buku ?></td>
                         <td><?= $penerbit ?></td>
                         <td><?= $jenis_buku ?></td>
