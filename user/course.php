@@ -4,6 +4,11 @@ session_start();
 
 $sql   = "select * from `buku`";
 $query = mysqli_query($conn, $sql);
+$count = mysqli_num_rows($query);
+
+$user       = "select * from `user`";
+$result     = mysqli_query($conn, $user);
+$userCount  = mysqli_num_rows($result);
 ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -66,13 +71,13 @@ $query = mysqli_query($conn, $sql);
                         <div class="row align-items-center justify-content-center">
                             <div class=" col-md-6 text-center">
                                 <div class="d-flex justify-content-center">
-                                    <h4 class="display-6 text-white fw-bold mb-0">69</h4>
+                                    <h4 class="display-6 text-white fw-bold mb-0"><?= $count; ?></h4>
                                 </div>
                                 <h6 class="text-dark mb-0 fw-bold">Total Buku</h6>
                             </div>
                             <div class=" col-md-6  text-center">
                                 <div class="d-flex justify-content-center">
-                                    <h4 class="display-6 text-white fw-bold mb-0">69</h4>
+                                    <h4 class="display-6 text-white fw-bold mb-0"><?= $userCount; ?></h4>
                                 </div>
                                 <h6 class="text-dark mb-0 fw-bold">Total User</h6>
                             </div>
@@ -179,7 +184,8 @@ $query = mysqli_query($conn, $sql);
                               <i class="fa fa-trash"></i>
                             </a>
                           </td>
-                        <?php } ?>
+                      <?php } ?>
+                      </tr>
                     <?php }?>
                   </tbody>
                 </table>
